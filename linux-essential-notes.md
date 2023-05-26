@@ -1,9 +1,11 @@
 # linux-essentials
 
-### Topics Covered
-  - <a name="Understanding permissions in linux"></a>
+## Topics Covered
+- Understanding permissions in linux
+- Changing file permissions
+- Understanding Users and Groups
 
-[Understanding permissions in linux](#Understanding permissions in linux)
+## Understanding permissions in linux
   In Linux, file permissions are a way to control access to files and directories. They determine who can read, write, and execute a file or directory. Understanding permissions is crucial for managing security and controlling access to sensitive data.
 
 Linux file permissions consist of three basic permissions: read (r), write (w), and execute (x). These permissions are assigned to three different categories of users: the owner of the file, the group associated with the file, and others (everyone else).
