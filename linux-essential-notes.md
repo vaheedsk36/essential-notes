@@ -1,4 +1,5 @@
 # linux-essentials
+This repo covers all essential commands, which will be handy if you are using a personal virtual linux machine or a linux pc
 
 ## Topics Covered
 - Understanding permissions in linux
