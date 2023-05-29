@@ -5,6 +5,7 @@ This repo covers all essential commands, which will be handy if you are using a 
 - Understanding permissions in linux
 - Changing file permissions
 - Understanding Users and Groups
+- Increase decrease swap memory
 
 ## Understanding permissions in linux
   In Linux, file permissions are a way to control access to files and directories. They determine who can read, write, and execute a file or directory. Understanding permissions is crucial for managing security and controlling access to sensitive data.
@@ -50,4 +51,72 @@ To modify permissions, you can use the chmod command. It allows you to add or re
      - user’s login shell (the program that runs when you log in. The nologin is a program that does nothing, used to prevent logging in as system users)
  - To modify a Linux user: use the usermod command like this: `usermod <username>`
  - To delete a Linux user: use the userdel command like this: `userdel <username>`
- - 
+
+
+## To increase the swap memory to 4GB in Ubuntu, you can follow these steps:
+
+1. Check the current swap usage and available space by running the **`free -h`** command. This will display the memory usage statistics, including swap.
+2. Disable the existing swap space by executing the following command as root or with sudo privileges:
+    
+    ```
+    sudo swapoff -a
+    ```
+    
+3. Back up the existing swap configuration file:
+    
+    ```
+    sudo cp /etc/fstab /etc/fstab.bak
+    ```
+    
+4. Edit the **`/etc/fstab`** file using a text editor of your choice (e.g., nano or vim):
+    
+    ```
+    sudo nano /etc/fstab
+    ```
+    
+5. Look for the line that defines the swap partition or file. It may look similar to this:
+    
+    ```
+    UUID=<swap_UUID> none swap sw 0 0
+    
+    ```
+    
+    Note: The actual line might differ based on your system configuration.
+    
+6. Comment out or remove the existing swap line by adding a **`#`** at the beginning of the line:
+    
+    ```
+    # UUID=<swap_UUID> none swap sw 0 0
+    ```
+    
+7. Add a new line at the end of the file to define the new swap space. If you have a separate swap partition, use the device path (e.g., **`/dev/sdb1`**). If you want to create a swap file, use the file path (e.g., **`/swapfile`**):
+    
+    For a separate swap partition:
+    
+    ```
+    /dev/sdb1 none swap sw 0 0
+    ```
+    
+    For a swap file:
+    
+    ```
+    /swapfile none swap sw 0 0
+    ```
+    
+8. Save the changes and exit the text editor.
+9. If you created a new swap partition, you can enable it by running the following command:
+    
+    ```
+    sudo swapon -a
+    ```
+    
+    If you created a swap file, you need to create and enable it:
+    
+    ```
+    sudo fallocate -l 4G /swapfile
+    sudo chmod 600 /swapfile
+    sudo mkswap /swapfile
+    sudo swapon /swapfile
+    ```
+    
+10. Verify the new swap space by running **`free -h`** command again. It should now show an increased swap size of 4GB.
