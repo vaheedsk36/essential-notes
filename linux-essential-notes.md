@@ -53,7 +53,7 @@ To modify permissions, you can use the chmod command. It allows you to add or re
  - To delete a Linux user: use the userdel command like this: `userdel <username>`
 
 
-## To increase the swap memory to 4GB in Ubuntu, you can follow these steps:
+## To increase the swap memory in Ubuntu, you can follow these steps:
 
 1. Check the current swap usage and available space by running the **`free -h`** command. This will display the memory usage statistics, including swap.
 2. Disable the existing swap space by executing the following command as root or with sudo privileges:
