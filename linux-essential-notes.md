@@ -6,6 +6,8 @@ This repo covers all essential commands, which will be handy if you are using a 
 - Changing file permissions
 - Understanding Users and Groups
 - Increase decrease swap memory
+- <a href="https://humanwhocodes.com/snippets/2021/03/create-user-linux-ssh-key/"> Creating a new user with an SSH key on Linux <a/>
+
 
 ## Understanding permissions in linux
   In Linux, file permissions are a way to control access to files and directories. They determine who can read, write, and execute a file or directory. Understanding permissions is crucial for managing security and controlling access to sensitive data.
@@ -51,7 +53,7 @@ To modify permissions, you can use the chmod command. It allows you to add or re
      - user’s login shell (the program that runs when you log in. The nologin is a program that does nothing, used to prevent logging in as system users)
  - To modify a Linux user: use the usermod command like this: `usermod <username>`
  - To delete a Linux user: use the userdel command like this: `userdel <username>`
-
+ 
 
 ## To increase the swap memory in Ubuntu, you can follow these steps:
 
