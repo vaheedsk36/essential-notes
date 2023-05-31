@@ -122,3 +122,26 @@ To modify permissions, you can use the chmod command. It allows you to add or re
     ```
     
 10. Verify the new swap space by running **`free -h`** command again. It should now show an increased swap size of 4GB.
+  
+ ## Changing ownership of a file
+    ### There are several cases where you might need to change the ownership of a file or directory. Here are a few common scenarios:
+  
+     - User Account Changes: If a file was created or owned by a specific user account that no longer exists or has changed, you may need to update the ownership to reflect the new user account.
+     - File Transfer: When transferring files between systems or users, the ownership may need to be changed to ensure that the new user has the appropriate permissions and control over the file. 
+     - Collaborative Work: In a multi-user environment or when collaborating on a project, you may need to change the ownership of certain files or directories to allow different users or groups to access and modify them.
+     - Administrative Tasks: System administrators often need to change ownership to manage system files, configuration files, or log files. This allows them to control access and perform necessary tasks.
+     - Security Considerations: Changing ownership can be necessary for security purposes. For example, if a file has sensitive information, you may want to change the ownership to restrict access only to authorized users.
+     - Restoration or Recovery: During data restoration or recovery from backups or snapshots, ownership may need to be adjusted to match the original configuration or to ensure proper access rights.
+     - It's important to note that changing ownership should be done with caution, as incorrect ownership settings can lead to security vulnerabilities or unintended access restrictions.
+     - Always ensure that the new ownership is appropriate for the file or directory and aligns with your intended use and security requirements.
+      
+     - To change the ownership of a file from root:root to vaheedshaik:vaheedshaik, you can use the chown command in Ubuntu. Here's an example of how to do it:
+     ```
+     sudo chown vaheedshaik:vaheedshaik /path/to/file
+     ```
+  
+
+
+
+
+
