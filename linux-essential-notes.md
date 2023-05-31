@@ -6,6 +6,7 @@ This repo covers all essential commands, which will be handy if you are using a 
 - Changing file permissions
 - Understanding Users and Groups
 - Increase decrease swap memory
+- [Increase decrease swap memory](#increase-decrease-swap-memory)
 - <a href="https://humanwhocodes.com/snippets/2021/03/create-user-linux-ssh-key/"> Creating a new user with an SSH key on Linux <a/>
 
 
@@ -76,7 +77,7 @@ To modify permissions, you can use the chmod command. It allows you to add or re
  - To modify a Linux user: use the usermod command like this: `usermod <username>`
  - To delete a Linux user: use the userdel command like this: `userdel <username>`
  
-
+<a id="increase-decrease-swap-memory"></a>
 ## To increase the swap memory in Ubuntu, you can follow these steps:
 
 1. Check the current swap usage and available space by running the **`free -h`** command. This will display the memory usage statistics, including swap.
