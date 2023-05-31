@@ -4,10 +4,11 @@ This repo covers all essential commands, which will be handy if you are using a 
 ## Topics Covered
 - Understanding permissions in linux
 - Changing file permissions
-- Understanding Users and Groups
-- Increase decrease swap memory
+- [Understanding Users and Groups](#understanding-user-and-groups)
 - [Increase decrease swap memory](#increase-decrease-swap-memory)
 - <a href="https://humanwhocodes.com/snippets/2021/03/create-user-linux-ssh-key/"> Creating a new user with an SSH key on Linux <a/>
+- [Changing ownership of a file](#changing-ownership-of-a-file)
+  
 
 
 ## Understanding permissions in linux
@@ -62,7 +63,7 @@ To modify permissions, you can use the chmod command. It allows you to add or re
   0 corresponds to no permissions for others.
   Again, make sure to replace /path/to/file with the actual path to the file you want to modify.
 
-
+  <a id="understanding-user-and-groups"></a>
 ### Understanding Users and Groups
  - `less /etc/passwd`
  - `/etc/passwd` is the file that holds the information about users, and less outputs it nicely. Some time ago, passwd also stored user’s passwords, but not           anymore, for security reasons. Here is a sample output from a fresh install of Ubuntu Serve
@@ -146,6 +147,7 @@ To modify permissions, you can use the chmod command. It allows you to add or re
     
 10. Verify the new swap space by running **`free -h`** command again. It should now show an increased swap size of 4GB.
   
+ <a id="changing-ownership-of-a-file"></a>
  ## Changing ownership of a file
   
 ### There are several cases where you might need to change the ownership of a file or directory. Here are a few common scenarios:
