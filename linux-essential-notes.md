@@ -37,7 +37,29 @@ To view the permissions of a file or directory, you can use the `ls -l` command 
 To modify permissions, you can use the chmod command. It allows you to add or remove permissions for the owner, group, and others. For example, chmod +x filename adds execute permission for the file's owner, group, and others.
 
 ### Changing file permissions
+  
+  To give a user read, write, and execute permissions to a file, you can use the chmod command in Ubuntu. Here's an example of how to do it:
+  ```
+  chmod u+rwx /path/to/file
+  ```
+  In the above command:
 
+  u refers to the user who owns the file.
+  +rwx adds read, write, and execute permissions for the user.
+  /path/to/file is the path to the file you want to modify.
+  After running the command, the user will have read, write, and execute permissions on the specified file.
+
+  You can also use numeric mode to set permissions. For example, if you want to give read, write, and execute permissions to the user, read-only permissions to the group, and no permissions to others, you can use the following command:
+  
+  ```
+  chmod 750 /path/to/file
+  ```
+  
+  In this case:
+  7 corresponds to read, write, and execute permissions for the owner (user).
+  5 corresponds to read and execute permissions for the group.
+  0 corresponds to no permissions for others.
+  Again, make sure to replace /path/to/file with the actual path to the file you want to modify.
 
 
 ### Understanding Users and Groups
