@@ -2,15 +2,15 @@
 This repo covers all essential commands, which will be handy if you are using a linux machine
 
 ## Topics Covered
-- Understanding permissions in linux
-- Changing file permissions
-- [Understanding Users and Groups](#understanding-user-and-groups)
+- [Understanding permissions in linux](#understanding-permissions-in-linux)
+  - [Changing file permissions](#changing-file-permissions)
+  - [Understanding Users and Groups](#understanding-user-and-groups)
 - [Increase decrease swap memory](#increase-decrease-swap-memory)
 - <a href="https://humanwhocodes.com/snippets/2021/03/create-user-linux-ssh-key/"> Creating a new user with an SSH key on Linux <a/>
 - [Changing ownership of a file](#changing-ownership-of-a-file)
   
 
-
+<a id="understanding-permissions-in-linux"></a>
 ## Understanding permissions in linux
   In Linux, file permissions are a way to control access to files and directories. They determine who can read, write, and execute a file or directory. Understanding permissions is crucial for managing security and controlling access to sensitive data.
 
@@ -38,6 +38,7 @@ To view the permissions of a file or directory, you can use the `ls -l` command 
 
 To modify permissions, you can use the chmod command. It allows you to add or remove permissions for the owner, group, and others. For example, chmod +x filename adds execute permission for the file's owner, group, and others.
 
+<a id="changing-file-permissions"></a>
 ### Changing file permissions
   
   To give a user read, write, and execute permissions to a file, you can use the chmod command in Ubuntu. Here's an example of how to do it:
@@ -63,7 +64,7 @@ To modify permissions, you can use the chmod command. It allows you to add or re
   0 corresponds to no permissions for others.
   Again, make sure to replace /path/to/file with the actual path to the file you want to modify.
 
-  <a id="understanding-user-and-groups"></a>
+<a id="understanding-user-and-groups"></a>
 ### Understanding Users and Groups
  - `less /etc/passwd`
  - `/etc/passwd` is the file that holds the information about users, and less outputs it nicely. Some time ago, passwd also stored user’s passwords, but not           anymore, for security reasons. Here is a sample output from a fresh install of Ubuntu Serve
