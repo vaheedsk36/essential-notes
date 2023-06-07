@@ -14,12 +14,29 @@ This repo covers all essential commands, which will be handy if you are using a 
 ## Understanding permissions in linux
   In Linux, file permissions are a way to control access to files and directories. They determine who can read, write, and execute a file or directory. Understanding permissions is crucial for managing security and controlling access to sensitive data.
 
+  Each line corresponds to a file contained within the directory. The information can be broken down into fields separated by spaces. The fields are as follows:
+
+
   
  ```
   -rw-r--r-- 1 root   root  18047 Dec 20  2017 alternatives.log       
             
   drwxr-x--- 2 root   adm    4096 Dec 20  2017 apache2  
   ```
+  
+  The first field actually contains ten characters, where the first character indicates the type of file and the next nine specify permissions. The file types are:
+  
+  ```
+Symbol	File Type	Description
+d	directory	A file used to store other files.
+-	regular file	Includes readable files, images files, binary files, and compressed files.
+l	symbolic link	Points to another file.
+s	socket	Allows for communication between processes.
+p	pipe	Allows for communication between processes.
+b	block file	Used to communicate with hardware.
+c	character file	Used to communicate with hardware.
+```
+  
 Linux file permissions consist of three basic permissions: read (r), write (w), and execute (x). These permissions are assigned to three different categories of users: the owner of the file, the group associated with the file, and others (everyone else).
 
 Here's a breakdown of how file permissions work:
