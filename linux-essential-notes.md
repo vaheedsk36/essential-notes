@@ -1,6 +1,6 @@
 # linux-essentials
 This repo covers all essential commands, which will be handy if you are using a linux machine
-
+(ref cisco course and colt steele udemy course)
 ## Topics Covered
 - [Understanding permissions in linux](#understanding-permissions-in-linux)
   - [Changing file permissions](#changing-file-permissions)
