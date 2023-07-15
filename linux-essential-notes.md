@@ -1,5 +1,5 @@
 # linux-essentials
-This repo covers all essential commands, which will be handy if you are using a linux machine
+This repo covers all essential commands, which will be handy if you are wirking on a linux machine
 
 ## Topics Covered
 - [Understanding permissions in linux](#understanding-permissions-in-linux)
