@@ -8,6 +8,7 @@ This repo covers all essential commands, which will be handy if you are wirking 
 - [Increase decrease swap memory](#increase-decrease-swap-memory)
 - <a href="https://humanwhocodes.com/snippets/2021/03/create-user-linux-ssh-key/"> Creating a new user with an SSH key on Linux <a/>
 - [Changing ownership of a file](#changing-ownership-of-a-file)
+- Exploring Symlink
   
 
 <a id="understanding-permissions-in-linux"></a>
