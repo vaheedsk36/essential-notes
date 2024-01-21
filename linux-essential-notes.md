@@ -11,7 +11,7 @@ This repo covers all essential commands and concepts, which will be handy if you
 - [Increase decrease swap memory](#increase-decrease-swap-memory)
 - <a href="https://humanwhocodes.com/snippets/2021/03/create-user-linux-ssh-key/"> Creating a new user with an SSH key on Linux <a/>
 - [Changing ownership of a file](#changing-ownership-of-a-file)
-- Exploring Symlink
+- [Learn Linux in depth (recommended)](https://github.com/djeada/Linux-Notes/blob/main/README.md)
 
 <a id="basic-cursor-shortcuts"></a>
 ## Basic Cursor Shortcuts:
@@ -48,47 +48,43 @@ Now, ls is a comman used for listing all the files in your directory. So, if you
 - `touch <filename>`: Creates an empty file or updates the timestamp of an existing file.
 
 ### Output Redirection:
-`> Operator`:
-Redirects standard output to a file.
-Creates the file if it doesn't exist; overwrites if it does.
-`>> Operator`:
-Appends output to a file.
-Creates a new file if it doesn't exist.
+- `> Operator`:
+   - Redirects standard output to a file.
+   - Creates the file if it doesn't exist; overwrites if it does.
+- `>> Operator`:
+   - Appends output to a file.
+   - Creates a new file if it doesn't exist.
 
 ### Input Redirection:
-`< Operator`:
-Allows a command to take input from a file.
-
-`Pipe Operator`:
-| Operator:
-Connects the output of one command to the input of another.
+- `< Operator`: Allows a command to take input from a file.
+- `Pipe Operator`:
+| Operator: Connects the output of one command to the input of another.
 
 ### Error Redirection:
-2> and 2>> Operators:
-Redirects standard error to a file.
-2> overwrites; 2>> appends.
+- 2> and 2>> Operators: Redirects standard error to a file.
+- 2> overwrites; 2>> appends.
 
 ### Understanding Pipe Command:
-Connects stdout of one command to stdin of another.
-Example: netstat -nltp | grep 3000.
+- Connects stdout of one command to stdin of another.
+- Example: netstat -nltp | grep 3000.
 
 ### Pathname Expansions:
-`* (Asterisk)`:
-`ls *.html`: Shows all files with the html extension.
-`ls test*`: Shows all files containing the name "test”.
+- `* (Asterisk)`:
+   - `ls *.html`: Shows all files with the html extension.
+   - `ls test*`: Shows all files containing the name "test”.
 
 ### Grep:
-Pattern matching using grep.
-Example: `netstat -nltp | grep 3000`.
-`grep <word> <filename>`: Searches for lines containing the specified word in the file.
--w helps to find exactly the word
+- Pattern matching using grep.
+- Example: `netstat -nltp | grep 3000`.
+- `grep <word> <filename>`: Searches for lines containing the specified word in the file.
+- `-w` helps to find exactly the word
 
 ### Permissions:
-We have 10 character determining a files permissions
-First one: file type
-remaining 9 character in that 3 each tells the permissions of owner | group | world (other than owner and group)
-d: directory | r: read | w: write | x: executable | l: symbolic link | b: block etc
-A group can have multiple users having a rex permissions set.
+- We have 10 character determining a files permissions
+- First one: file type
+- remaining 9 character in that 3 each tells the permissions of owner | group | world (other than owner and group)
+- d: directory | r: read | w: write | x: executable | l: symbolic link | b: block etc
+- A group can have multiple users having a rex permissions set.
 
 ### Modifying Permissions:
 - using chmod command we can modify permissions
