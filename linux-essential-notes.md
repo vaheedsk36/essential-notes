@@ -1,7 +1,10 @@
 # linux-essentials
-This repo covers all essential commands, which will be handy if you are wirking on a linux machine
+This repo covers all essential commands and concepts, which will be handy if you are wirking on a linux machine
 
 ## Topics Covered
+- [Basic Cursor Shortcuts](#basic-cursor-shortcuts)
+- [Understanding man page](#understanding-man-page)
+- [Essential Commands](#essential-commands)
 - [Understanding permissions in linux](#understanding-permissions-in-linux)
   - [Changing file permissions](#changing-file-permissions)
   - [Understanding Users and Groups](#understanding-user-and-groups)
@@ -9,10 +12,103 @@ This repo covers all essential commands, which will be handy if you are wirking 
 - <a href="https://humanwhocodes.com/snippets/2021/03/create-user-linux-ssh-key/"> Creating a new user with an SSH key on Linux <a/>
 - [Changing ownership of a file](#changing-ownership-of-a-file)
 - Exploring Symlink
-  
+
+<a id="basic-cursor-shortcuts"></a>
+## Basic Cursor Shortcuts:
+These are some shortcuts used for navigating you cursor and deleting commands on terminal.
+- `ctrl + l`: Clear the previous line in the command prompt.
+- `ctrl + a`: Move the cursor to the line start.
+- `ctrl + e`: Move the cursor to the line end.
+- `ctrl + k`: Delete from the cursor to the line end.
+- `ctrl + u`: Delete from the cursor to the line start.
+
+<a id="understanding-man-page"></a>
+## Understanding man page:
+A man page in Linux is a documentation file providing information on commands, utilities, or functions. Accessed with the man command, it's organized into sections (e.g., user commands, system calls). For example, to view the manual page for the ls command:
+```
+man ls
+```
+Now, ls is a comman used for listing all the files in your directory. So, if you run the below command, man page will give you details on what all things the command can do and their syntaxes. Just like in the image below. So, if you every get confused with a command, man page is there to help you.
+<br/>
+<br/>
+<img width="725" alt="image" src="https://github.com/vaheedsk36/essential-notes/assets/72762824/78226205-f0ae-434f-958c-189e5301490a">
+
+<a id="essential-commands"></a>
+## Essential Commands:
+### File Viewing:
+
+- `cat <filename>`: Prints the whole file content.
+- `less <filename>`: Prints the file content in a paginated format.
+- `head <filename>`: Prints the first few lines of the file.
+- `tail <filename>`: Prints the last few lines of a file.
+
+### File Editing:
+- `vi <filename>`: Creates a new file if the file doesn't exists else, opens the existinf file.
+- `nano <filename>`: Text editors for creating or editing files.
+- `touch <filename>`: Creates an empty file or updates the timestamp of an existing file.
+
+### Output Redirection:
+`> Operator`:
+Redirects standard output to a file.
+Creates the file if it doesn't exist; overwrites if it does.
+`>> Operator`:
+Appends output to a file.
+Creates a new file if it doesn't exist.
+
+### Input Redirection:
+`< Operator`:
+Allows a command to take input from a file.
+
+`Pipe Operator`:
+| Operator:
+Connects the output of one command to the input of another.
+
+### Error Redirection:
+2> and 2>> Operators:
+Redirects standard error to a file.
+2> overwrites; 2>> appends.
+
+### Understanding Pipe Command:
+Connects stdout of one command to stdin of another.
+Example: netstat -nltp | grep 3000.
+
+### Pathname Expansions:
+`* (Asterisk)`:
+`ls *.html`: Shows all files with the html extension.
+`ls test*`: Shows all files containing the name "test”.
+
+### Grep:
+Pattern matching using grep.
+Example: `netstat -nltp | grep 3000`.
+`grep <word> <filename>`: Searches for lines containing the specified word in the file.
+-w helps to find exactly the word
+
+### Permissions:
+We have 10 character determining a files permissions
+First one: file type
+remaining 9 character in that 3 each tells the permissions of owner | group | world (other than owner and group)
+d: directory | r: read | w: write | x: executable | l: symbolic link | b: block etc
+A group can have multiple users having a rex permissions set.
+
+### Modifying Permissions:
+- using chmod command we can modify permissions
+- `+` for adding a permission, - for removing a permission and = for applying a single permission tp all the 3 categories
+- u: means user (owner)
+- g: group
+- a: all
+- o: others (rest)
+- chmod u+x <filename> will make the file executable for the user
+- chmod u-r <filename> will remove read permissions for the user
+
+### su (substitue users):
+
+- Using su we can login as an substitute user in the existing user session
+- `su - <username>` : login sub user with directory as home
+- `su <username>`: login sub user in the same path of current user
 
 <a id="understanding-permissions-in-linux"></a>
-## Understanding permissions in linux
+
+### Understanding permissions in linux
   In Linux, file permissions are a way to control access to files and directories. They determine who can read, write, and execute a file or directory. Understanding permissions is crucial for managing security and controlling access to sensitive data.
 
   Each line corresponds to a file contained within the directory. The information can be broken down into fields separated by spaces. The fields are as follows:
@@ -187,7 +283,7 @@ To modify permissions, you can use the chmod command. It allows you to add or re
  - Always ensure that the new ownership is appropriate for the file or directory and aligns with your intended use and security requirements.
 
  - To change the ownership of a file from root:root to vaheedshaik:vaheedshaik, you can use the chown command in Ubuntu. Here's an example of how to do it:
-
+    
  ```
  sudo chown vaheedshaik:vaheedshaik /path/to/file
  ```
