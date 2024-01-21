@@ -1,5 +1,5 @@
 # linux-essentials
-This repo covers all essential commands and concepts, which will be handy if you are wirking on a linux machine
+This repo covers basic essential commands and concepts, which will be handy if you are wirking on a linux machine. But, if you want to explore more things conceptually and detailed explanation, then checkout `Learn Linux in depth (recommended)` section, its not mine but someone, I follow for stuff related to linux.
 
 ## Topics Covered
 - [Basic Cursor Shortcuts](#basic-cursor-shortcuts)
